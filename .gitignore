@@ -1,0 +1,6 @@
+.idea/*
+.terraform/*
+*.zip
+terraform.*
+.terraform.*
+teste.py
