@@ -29,9 +29,10 @@ resource "aws_db_instance" "banco" {
   db_name              = "fiap"
   engine               = "mariadb"
   engine_version       = "10.11"
-  instance_class       = "db.t3.medium"
+  instance_class       = "db.t3.micro"
   username             = "fiap_user"
   password             = var.senha_banco
   skip_final_snapshot  = true
   db_subnet_group_name = var.subnet_group
+  apply_immediately = true
 }
