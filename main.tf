@@ -17,13 +17,11 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 4.16"
+      version = "~> 5.0"
     }
   }
 
-  required_version = ">= 1.2.0"
 }
-
 
 resource "aws_db_instance" "banco" {
   identifier           = "fiap-db"
@@ -32,7 +30,7 @@ resource "aws_db_instance" "banco" {
   engine               = "mariadb"
   engine_version       = "10.11"
   instance_class       = "db.t3.micro"
-  username             = "foo"
+  username             = "fiap_user"
   password             = var.senha_banco
   skip_final_snapshot  = true
   db_subnet_group_name = var.subnet_group
