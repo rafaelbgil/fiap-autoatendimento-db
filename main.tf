@@ -36,3 +36,4 @@ resource "aws_db_instance" "banco" {
   db_subnet_group_name = var.subnet_group
   apply_immediately = true
 }
+
